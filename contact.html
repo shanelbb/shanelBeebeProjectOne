@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/35da8f1ae7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Creative Contact</title>
+  </head>
+  <body>
+    <header class="headerContact wrapper">
+      <div class="topBar innerWrapper">
+        <h2>Creative</h2>
+        <nav class="siteNav">
+          <!-- Hamburger menu icon and checkbox for mobile nav -->
+          <label for="toggle" class="toggle"><i class="fas fa-bars"></i></label>
+          <input type="checkbox" id="toggle" class="toggle" />
+
+          <!-- Navigation menu items -->
+          <ul class="siteNavList">
+            <li><a href="index.html" class="siteNavItem homeLink">Home</a></li>
+            <li><a href="blog.html" class="siteNavItem">Blog</a></li>
+            <li><a href="#" class="siteNavItem">Portfolio</a></li>
+            <li><a href="#" class="siteNavItem">Shop</a></li>
+            <li><a href="contact.html" class="siteNavItem">Contact</a></li>
+            <li>
+              <a href="#" class="siteNavItem siteNavItemIcon">
+                <i class="fas fa-search"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="siteNavItem siteNavItemIcon">
+                <i class="fas fa-shopping-bag"></i>
+              </a>
+              <!-- circular item-counter on shopping bag icon -->
+              <span>2</span>
+            </li>
+          </ul>
+        </nav>
+        <!-- navigation menu ends -->
+      </div>
+      <div class="contactHeaderImgContainer innerWrapper">
+        <img
+          src="./assets/contact-1.jpeg"
+          alt="a plant next to a laptop keyboard"
+        />
+        <h1>Contact Us</h1>
+      </div>
+    </header>
+    <!-- main starts here -->
+    <main class="wrapper">
+      <section class="contactDetails innerWrapper">
+        <h3>Contact Details</h3>
+        <p>
+          If you need any help, please contact us or send us an email or go to
+          our forum. We are sure that you can receive our reply as soon as
+          possible
+        </p>
+        <ul>
+          <li>
+            <i class="fas fa-mobile-alt"></i>
+            <h4>Phone</h4>
+            <p>Phone 01: 123 456 7890</p>
+            <p>Phone 02: 345 678 9101</p>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>Address</h4>
+            <address>6591 Orchard Street, Toronto, Ontario</address>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <h4>Email</h4>
+            <p>contact@creative.com</p>
+            <p>info@creative.com</p>
+          </li>
+        </ul>
+      </section>
+      <section class="getInTouchForm innerWrapper">
+        <h3>Get In Touch With Us</h3>
+        <p>
+          If you have any questions, please don't hesitate to send us a message
+        </p>
+        <form action="">
+          <fieldset>
+            <label for="userName" class="visuallyHidden"
+              >Enter your name...</label
+            >
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              placeholder="Enter your name..."
+            />
+            <label for="userEmail" class="visuallyHidden"
+              >Enter your email...</label
+            >
+            <input
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              placeholder="youremail@domain.com"
+            />
+            <label for="subject" class="visuallyHidden"
+              >Subject(optional)</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject(optional)"
+            />
+          </fieldset>
+          <label for="UserComment" class="visuallyHidden"
+            >Here goes your comment</label
+          >
+          <input
+            type="textarea"
+            id="UserComment"
+            name="UserComment"
+            placeholder="Here goes your comment"
+          />
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      <div class="contactMainImgContainer"></div>
+    </main>
+
+    <!-- Footer starts here -->
+    <footer class="wrapper">
+      <div class="footerContainer innerWrapper">
+        <section class="contact">
+          <h5 class="contactHeading">Contact Us</h5>
+          <address>
+            <p>6591 Orchard Street, Toronto, Ontario</p>
+            <p>Email: contact@creative.com</p>
+            <p>Phone 01: 123 456 7890</p>
+            <p>Phone 02: 345 678 9101</p>
+            <p>Fax: 643 6543 898</p>
+          </address>
+          <nav class="social">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="recentPosts">
+          <h5 class="recentHeading">Recent Posts</h5>
+          <ul>
+            <li><a href="blog.html">Conversion hackathon partner</a></li>
+            <li><a href="blog.html">Network channels entrepreneur</a></li>
+            <li><a href="blog.html">Return on investment creative</a></li>
+            <li><a href="blog.html">Assets interaction design venture</a></li>
+            <li><a href="blog.html">Infographic learning curve</a></li>
+          </ul>
+        </section>
+        <section class="twitterWidget">
+          <form action="">
+            <label for="userEmail"
+              >Signup for emails and notifications below.</label
+            >
+            <input
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              placeholder="Enter your email"
+            />
+            <button><i class="fas fa-long-arrow-alt-right"></i></button>
+          </form>
+        </section>
+      </div>
+      <section class="siteOwnership wrapper">
+        <p>Creative Agency</p>
+      </section>
+    </footer>
+  </body>
+</html>
