@@ -37,7 +37,7 @@
   <body>
     <header class="headerContact wrapper">
       <div class="topBar innerWrapper">
-        <h2>Creative</h2>
+        <!-- site nav starts -->
         <nav class="siteNav">
           <!-- Hamburger menu icon and checkbox for mobile nav -->
           <label for="toggle" class="toggle"><i class="fas fa-bars"></i></label>
@@ -45,26 +45,37 @@
 
           <!-- Navigation menu items -->
           <ul class="siteNavList">
-            <li><a href="index.html" class="siteNavItem homeLink">Home</a></li>
-            <li><a href="blog.html" class="siteNavItem">Blog</a></li>
-            <li><a href="#" class="siteNavItem">Portfolio</a></li>
-            <li><a href="#" class="siteNavItem">Shop</a></li>
-            <li><a href="contact.html" class="siteNavItem">Contact</a></li>
-            <li>
-              <a href="#" class="siteNavItem siteNavItemIcon">
-                <i class="fas fa-search"></i>
-              </a>
+            <li class="navListGroup">
+              <ul class="innerList">
+                <li>
+                  <a href="index.html" class="siteNavItem homeLink">Home</a>
+                </li>
+                <li><a href="blog.html" class="siteNavItem">Blog</a></li>
+                <li><a href="#" class="siteNavItem">Portfolio</a></li>
+              </ul>
             </li>
-            <li>
-              <a href="#" class="siteNavItem siteNavItemIcon">
-                <i class="fas fa-shopping-bag"></i>
-              </a>
-              <!-- circular item-counter on shopping bag icon -->
-              <span>2</span>
+            <li class="navListGroup bottomList">
+              <ul class="innerList">
+                <li><a href="#" class="siteNavItem">Shop</a></li>
+                <li><a href="contact.html" class="siteNavItem">Contact</a></li>
+                <li>
+                  <a href="#" class="siteNavItem siteNavItemIcon">
+                    <i class="fas fa-search"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="siteNavItem siteNavItemIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                  </a>
+                  <!-- circular item-counter on shopping bag icon -->
+                  <span>2</span>
+                </li>
+              </ul>
             </li>
           </ul>
+          <h2 class="siteLogo">Creative</h2>
         </nav>
-        <!-- navigation menu ends -->
+        <!--site nav ends -->
       </div>
       <div class="contactHeaderImgContainer innerWrapper">
         <img
@@ -147,7 +158,7 @@
             name="UserComment"
             placeholder="Here goes your comment"
           />
-          <button type="submit">Send Message</button>
+          <button type="submit" class="btn">Send Message</button>
         </form>
       </section>
       <div class="contactMainImgContainer"></div>
