@@ -40,7 +40,9 @@
         <!-- site nav starts -->
         <nav class="siteNav">
           <!-- Hamburger menu icon and checkbox for mobile nav -->
-          <label for="toggle" class="toggle"><i class="fas fa-bars"></i></label>
+          <label for="toggle" class="toggle contactToggle"
+            ><i class="fas fa-bars"></i
+          ></label>
           <input type="checkbox" id="toggle" class="toggle" />
 
           <!-- Navigation menu items -->
@@ -66,23 +68,25 @@
                 <li>
                   <a href="#" class="siteNavItem siteNavItemIcon">
                     <i class="fas fa-shopping-bag"></i>
+                    <!-- circular item-counter on shopping bag icon -->
+                    <span>2</span>
                   </a>
-                  <!-- circular item-counter on shopping bag icon -->
-                  <span>2</span>
                 </li>
               </ul>
             </li>
           </ul>
-          <h2 class="siteLogo">Creative</h2>
+          <h2 class="siteLogo contactLogo">Creative</h2>
         </nav>
         <!--site nav ends -->
       </div>
-      <div class="contactHeaderImgContainer innerWrapper">
-        <img
-          src="./assets/contact-1.jpeg"
-          alt="a plant next to a laptop keyboard"
-        />
-        <h1>Contact Us</h1>
+      <div class="contactUsContainer">
+        <div class="contactUsImg wrapper">
+          <img
+            src="./assets/contact-1.jpeg"
+            alt="a plant next to a laptop keyboard"
+          />
+        </div>
+        <h1 class="innerWrapper contactUsText">Contact Us</h1>
       </div>
     </header>
     <!-- main starts here -->

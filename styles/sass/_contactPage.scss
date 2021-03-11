@@ -1,0 +1,30 @@
+.headerContact {
+  height: 50vh;
+  min-height: 200px;
+  max-height: 350px;
+}
+
+.contactLogo {
+  font-size: 1rem;
+}
+
+.contactUsContainer {
+  position: relative;
+}
+
+.contactUsImg {
+  height: 20vh;
+}
+
+.contactUsImg img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 0;
+}
+
+.contactUsText {
+  position: absolute;
+  left: 5%;
+  bottom: -18px;
+  width: 175px;
+}
