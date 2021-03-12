@@ -8,6 +8,7 @@ header {
 
 h1 {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .siteNavList,
@@ -17,6 +18,12 @@ input.toggle {
 
 .siteLogo {
   order: -1;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h2.siteLogo {
+  margin: 20px 0;
 }
 
 label.toggle {
@@ -63,7 +70,7 @@ input[type='checkbox']:checked + .siteNavList {
 }
 
 .bottomList {
-  padding-top: 0;
+  padding: 0 0 20px;
   a {
     position: relative;
     span {

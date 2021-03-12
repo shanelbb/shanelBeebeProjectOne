@@ -86,6 +86,7 @@
           <img
             src="./assets/home-2.jpeg"
             alt="A desktop with a computer screen cactus and wall calendar behind"
+            class="promoImg"
           />
           <!-- icon placed on corner of image -->
           <img
@@ -135,7 +136,7 @@
           alt="an ipad on a tabletop with a plant and a cup of coffee"
           class="featuresImg"
         />
-        <article class="featuresList">
+        <article class="featuresList innerWrapper">
           <ul class="featuresList1">
             <li class="featuresListItem">
               <i class="fas fa-magic"></i>
@@ -233,7 +234,7 @@
             src="./assets/home-9.jpeg"
             alt="Headshot of a woman wearing glasses with her dark hair tied back."
           />
-          <a href="#">Want to work with us!</a>
+          <div class="workWithUs"><a href="#">Want to work with us!</a></div>
         </div>
       </section>
       <section class="portfolio">
@@ -291,18 +292,22 @@
             <li><a href="blog.html">Infographic learning curve</a></li>
           </ul>
         </section>
-        <section class="twitterWidget">
+        <section class="subscribeNow">
+          <h5>Subscribe Now</h5>
           <form action="">
-            <label for="userEmail"
-              >Signup for emails and notifications below.</label
-            >
-            <input
-              type="email"
-              id="userEmail"
-              name="userEmail"
-              placeholder="Enter your email"
-            />
-            <button><i class="fas fa-long-arrow-alt-right"></i></button>
+            <p>Signup for emails and notifications below.</p>
+            <div>
+              <label for="userEmail" class="visuallyHidden"
+                >Signup for emails and notifications below.</label
+              >
+              <input
+                type="email"
+                id="userEmail"
+                name="userEmail"
+                placeholder="Enter your email"
+              />
+              <button><i class="fas fa-long-arrow-alt-right"></i></button>
+            </div>
           </form>
         </section>
       </div>

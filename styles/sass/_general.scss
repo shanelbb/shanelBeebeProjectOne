@@ -25,10 +25,13 @@ h5,
 nav a,
 button {
   text-transform: uppercase;
+  font-weight: normal;
+  color: $black;
 }
 
 p {
   font-family: $secondFont;
+  line-height: 1.6;
 }
 
 img {
@@ -36,25 +39,51 @@ img {
 }
 
 a {
-  color: black;
+  color: $black;
   text-decoration: none;
 }
 
 ul {
   list-style-type: none;
+  line-height: 1.4;
+}
+
+@keyframes line {
+  0% {
+    transform: scaleX(0.5);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .btn {
   font-family: $baseFont;
   font-size: 0.7rem;
   padding: 5px 0;
-  border: none;
-  border-bottom: 1px solid black;
+  border: 1px solid transparent;
   background-color: transparent;
-  transition: all 0.3s ease-in-out;
+  position: relative;
+  transition: all 0.5s ease;
 
-  &:hover,
-  &:focus {
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid $black;
+    padding-top: 5px;
+    transform: scaleX(100%);
+    transition: all 0.5s ease;
+  }
+
+  &:active {
     transform: scale(0.9);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    animation: line 0.5s;
   }
 }

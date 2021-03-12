@@ -1,4 +1,13 @@
+@media (min-width: 480px) {
+  .features {
+    img {
+      height: 400px;
+    }
+  }
+}
+
 @media (min-width: 768px) {
+  // header styles
   nav {
     position: relative;
   }
@@ -37,7 +46,7 @@
   }
 
   .bottomList {
-    padding-top: 10px;
+    padding: 10px 0 0 0;
   }
 
   .siteLogo {
@@ -46,7 +55,7 @@
     width: 200px;
     height: 30px;
     position: absolute;
-    top: 7px;
+    top: 8px;
     right: calc(50% - 100px);
     left: calc(50% - 100px);
   }
@@ -61,11 +70,94 @@
       }
     }
   }
+
+  // home page main styles
+  // promo section
+
+  .promo {
+    position: relative;
+    figure {
+      justify-content: center;
+      width: 40%;
+      .stamp {
+        top: -40px;
+        left: -30px;
+      }
+    }
+  }
+
+  .promo::before {
+    content: '';
+    width: 0;
+    height: 20%;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    top: -10%;
+    left: 50%;
+  }
+
+  .promoTextContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  //  Carousel Section styles
+  .carouselImgContainer {
+    span i {
+      font-size: 2rem;
+    }
+    img {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+    }
+  }
+
+  // Features Section styles
+  .features {
+    img {
+      height: 500px;
+    }
+  }
+
+  // Team section styles
+  .gridContainer {
+    .workWithUs {
+      a {
+        font-size: 1.5rem;
+        width: 80%;
+      }
+    }
+  }
+
+  // Portfolio Section Styles
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .portTextContainer {
+    @include flex(flex, center, center);
+    flex-direction: column;
+  }
+  .portImgContainer {
+    display: initial;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 @media (min-width: 940px) {
+  .innerWrapper {
+    width: 80%;
+  }
+
   .siteNavList {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .siteLogo {
@@ -84,6 +176,145 @@
       }
     }
   }
+
+  // Main styles
+  // Home Page Styles
+  .promo {
+    figure {
+      .stamp {
+        top: -55px;
+        left: -40px;
+      }
+    }
+  }
+
+  // Carousel section styles
+  .carousel {
+    padding: 100px 0;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  // Features section styles
+  .features {
+    background-image: url(../assets/home-4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    height: 800px;
+    position: relative;
+    img {
+      display: none;
+    }
+
+    article.featuresList {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 150px);
+      grid-gap: 20px;
+      width: 70%;
+      position: absolute;
+      right: 50px;
+      bottom: 50px;
+      .featuresList1 {
+        padding-top: 0;
+      }
+      .featuresList2 {
+        padding-bottom: 0;
+      }
+      .featuresListItem {
+        @include flex(flex, space-between, flex-start);
+        text-align: left;
+        font-size: 0.7rem;
+        i {
+          margin-right: 25px;
+        }
+        h3 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  // Team section styles
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    .gridTextContainer {
+      @include flex(flex, flex-end, flex-start);
+      flex-direction: column;
+      padding: 0 20px;
+      grid-column: 1 / 3;
+
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+    .workWithUs {
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // Footer Styles
+  .footerContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    p,
+    li,
+    a {
+      font-size: 0.6rem;
+    }
+
+    .contact {
+      text-align: left;
+      h5 {
+        text-align: left;
+      }
+      p {
+        margin: 5px 0;
+      }
+    }
+    h5 {
+      font-size: 0.9rem;
+    }
+  }
+
+  .social ul {
+    justify-content: flex-start;
+    padding: 0;
+
+    li {
+      padding-right: 20px;
+    }
+  }
+
+  .recentPosts {
+    border: none;
+    padding: 0;
+
+    ul {
+      li {
+        padding: 5px;
+      }
+    }
+  }
+
+  .subscribeNow {
+    h5 {
+      text-align: right;
+    }
+    p {
+      text-align: right;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -93,5 +324,43 @@
 
   .siteLogo {
     font-size: 1.5rem;
+  }
+
+  // Footer Styles
+  .footerContainer {
+    p,
+    li,
+    a {
+      font-size: 0.8rem;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .subscribeNow {
+    div {
+      justify-content: flex-end;
+    }
+  }
+
+  // Features section styles
+  .features {
+    background-position: 90% 0;
+  }
+
+  // Team section styles
+  .gridContainer {
+    .gridTextContainer {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .workWithUs {
+      a {
+        font-size: 1.5rem;
+      }
+    }
   }
 }

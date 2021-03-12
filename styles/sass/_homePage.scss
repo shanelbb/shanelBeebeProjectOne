@@ -1,3 +1,191 @@
 .headerHome {
   background-image: url(../assets/home-1.jpeg);
 }
+
+// Promo section styles
+
+.promo {
+  background-color: $primary;
+  padding: 150px 0 40px;
+
+  figure {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+
+    .promoImg {
+      width: 100%;
+    }
+
+    .stamp {
+      width: 40%;
+      position: absolute;
+      top: -40px;
+      left: -25px;
+    }
+  }
+
+  .promoTextContainer {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8rem;
+
+    div {
+      margin: 50px 0;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Carousel section styles
+
+.carousel {
+  padding: 50px 0;
+
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+    width: 80%;
+    margin: 50px auto 0;
+  }
+}
+
+.carouselImgContainer {
+  @include flex(flex, space-between, center);
+
+  span i {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+}
+
+// Features styles
+.features {
+  background-color: $secondWhite;
+  img {
+    height: 250px;
+    object-fit: cover;
+    object-position: 0;
+  }
+
+  .featuresList ul {
+    padding-left: 0;
+  }
+
+  .featuresList1 {
+    padding-top: 50px;
+  }
+
+  .featuresList2 {
+    padding-bottom: 50px;
+  }
+
+  .featuresListItem {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
+    i {
+      font-size: 2rem;
+      width: 75px;
+      height: 75px;
+      padding: 15px;
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+
+    p {
+      color: lighten($black, 30);
+    }
+  }
+}
+//  Team Section styles
+
+.team {
+  margin-bottom: 100px;
+}
+
+.team h2 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  .gridTextContainer {
+    background-color: $secondWhite;
+    padding: 100px 20px 20px;
+    grid-column: 1 / -1;
+
+    p {
+      font-size: 0.7rem;
+      color: lighten($black, 30);
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+  .workWithUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    a {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// Portfolio section styles
+.portTextContainer {
+  background-color: $primary;
+  text-align: center;
+  padding: 50px 30px 65px;
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 50px;
+  }
+  a {
+    font-size: 0.7rem;
+    font-weight: bold;
+    background-color: $secondWhite;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+
+    &:hover,
+    &:focus {
+      color: $secondWhite;
+      background-color: $black;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.portImgContainer {
+  display: none;
+}

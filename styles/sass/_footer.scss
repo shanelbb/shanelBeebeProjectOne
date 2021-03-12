@@ -1,0 +1,96 @@
+footer {
+  background-color: $black;
+  color: $white;
+  margin: 0;
+}
+
+footer a {
+  color: $white;
+}
+
+.footerContainer {
+  padding: 30px 0;
+  @include flex(flex, center, center);
+  flex-direction: column;
+
+  h5,
+  .contact {
+    text-align: center;
+  }
+  h5 {
+    font-size: 1.3rem;
+    margin: 25px 0;
+  }
+  a {
+    transition: all 0.5s ease;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.social ul {
+  @include flex(flex, space-around, center);
+  padding: 40px 0;
+  margin: 0;
+
+  li {
+    font-size: 1.5rem;
+  }
+}
+
+.recentPosts {
+  border-top: 1px solid darken($secondWhite, 50);
+  border-bottom: 1px solid darken($secondWhite, 50);
+  padding: 10px 0;
+  ul {
+    list-style-type: disc;
+
+    li {
+      padding: 10px;
+    }
+  }
+}
+
+.subscribeNow {
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  div {
+    @include flex(flex, center, center);
+
+    input {
+      font-size: 0.7rem;
+      font-family: $baseFont;
+      padding-left: 10px;
+      border: none;
+      height: 35px;
+    }
+    button {
+      border: none;
+      background-color: $primary;
+      height: 35px;
+      width: 40px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.siteOwnership {
+  border-top: 1px solid darken($secondWhite, 50);
+}
+.siteOwnership p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
