@@ -29,13 +29,19 @@ button {
   color: $black;
 }
 
+img {
+  max-width: 100%;
+}
+
+// The design says to use 14px font but I bumped it up in most places for better readability with designer permission.
+p,
+a {
+  font-size: 0.8rem;
+}
+
 p {
   font-family: $secondFont;
   line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
 }
 
 a {
