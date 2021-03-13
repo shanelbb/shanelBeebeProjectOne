@@ -774,7 +774,7 @@ footer a {
 }
 
 .featuredPost {
-  margin: 75px 0;
+  margin: 75px 0 25px;
   text-align: center;
 }
 .featuredPost h1 {
@@ -866,6 +866,49 @@ footer a {
   font-size: 1rem;
 }
 
+.relatedPosts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.relatedPosts h3 {
+  font-weight: bold;
+}
+.relatedPosts ul {
+  padding-left: 0;
+  width: 100%;
+}
+.relatedPosts ul li {
+  margin-bottom: 40px;
+}
+.relatedPosts ul img {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 75%;
+     object-position: 50% 75%;
+  display: block;
+}
+.relatedPosts ul p {
+  margin-top: 10px;
+}
+
+.lastPost {
+  display: none;
+}
+
 .headerContact {
   height: 50vh;
   min-height: 200px;
@@ -902,6 +945,10 @@ footer a {
 @media (min-width: 480px) {
   .features img {
     height: 400px;
+  }
+
+  .relatedPosts ul img {
+    max-height: 400px;
   }
 }
 @media (min-width: 768px) {
@@ -1058,6 +1105,19 @@ footer a {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .relatedPosts ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .relatedPosts ul p {
+    text-align: left;
+  }
+
+  .lastPost {
+    display: initial;
   }
 }
 @media (min-width: 940px) {

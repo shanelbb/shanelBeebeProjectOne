@@ -1,10 +1,22 @@
+// ** LARGE MOBILE MEDIA QUERIES **
+
 @media (min-width: 480px) {
   .features {
     img {
       height: 400px;
     }
   }
+
+  .relatedPosts {
+    ul {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
 }
+
+// ** TABLET MEDIA QUERIES **
 
 @media (min-width: 768px) {
   // header styles
@@ -149,9 +161,25 @@
       object-fit: cover;
     }
   }
+
+  .relatedPosts {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  .lastPost {
+    display: initial;
+  }
 }
 
-// Small desktop media queries
+// ** SMALL DESKTOP MEDIA QUERIES **
 
 @media (min-width: 940px) {
   .innerWrapper {
@@ -273,6 +301,11 @@
       letter-spacing: 2px;
       font-size: 2rem;
     }
+    //  Check with designer if I can leave byline center aligned
+    // .postByline {
+    //   text-align: left;
+    //   margin: 0;
+    // }
   }
 
   .postInfo {
