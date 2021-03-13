@@ -89,6 +89,8 @@ ul {
     transform: scale(0.9);
   }
 
+  // Tried transform: rotateY(180deg) which had
+  // similar effect but it was glitchy on the hover
   &:hover::after,
   &:focus::after {
     animation: line 0.5s;

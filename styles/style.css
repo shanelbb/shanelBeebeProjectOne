@@ -438,18 +438,18 @@ input[type=checkbox]:checked + .siteNavList {
 .bottomList a {
   position: relative;
 }
-.bottomList a span {
+.bottomList a i {
+  font-size: 1rem;
+}
+.bottomList a .cart {
   position: absolute;
-  bottom: -5px;
+  bottom: -8px;
   right: -8px;
-  width: 18px;
-  height: 18px;
   background-color: #c3dab7;
-  color: #333333;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  text-align: center;
   font-size: 0.7rem;
-  padding: 1px;
 }
 
 footer {
@@ -773,6 +773,99 @@ footer a {
   background-position: 20% 0;
 }
 
+.featuredPost {
+  margin: 75px 0;
+  text-align: center;
+}
+.featuredPost h1 {
+  font-size: 1.3rem;
+}
+.featuredPost .postByline {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.postInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.postInfo .author {
+  width: 100%;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.postInfo .author img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.postInfo .author .authorText {
+  margin: 20px 0;
+}
+.postInfo .author .authorText h4 {
+  margin: 0;
+}
+.postInfo .author .authorText p {
+  font-size: 0.7rem;
+  margin: 5px 0 0 0;
+}
+.postInfo ul {
+  display: none;
+}
+
+.postText {
+  text-align: left;
+}
+
+.postShare {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.postShare ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+.postShare ul li {
+  margin: 20px;
+}
+.postShare ul li a {
+  font-size: 1rem;
+}
+
 .headerContact {
   height: 50vh;
   min-height: 200px;
@@ -1078,6 +1171,65 @@ footer a {
   }
   .gridContainer .workWithUs a {
     font-size: 1rem;
+  }
+
+  .featuredPost h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+
+  .postInfo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #b3b3b3;
+  }
+  .postInfo .author {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .postInfo .author .authorText {
+    text-align: left;
+    margin-left: 20px;
+  }
+  .postInfo ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-left: 0;
+    margin: 40px 0 0;
+  }
+  .postInfo ul li {
+    text-align: left;
+  }
+  .postInfo ul li h4 {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .postInfo ul li p {
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  .postText {
+    padding-top: 30px;
+  }
+
+  .postShare {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .footerContainer {

@@ -55,7 +55,7 @@
 }
 
 .carouselImgContainer {
-  @include flex(flex, space-between, center);
+  @include flex(space-between, center);
 
   span i {
     font-size: 1.5rem;
@@ -143,9 +143,7 @@
     width: 100%;
   }
   .workWithUs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
     text-align: center;
 
     a {

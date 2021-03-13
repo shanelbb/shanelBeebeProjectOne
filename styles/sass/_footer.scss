@@ -10,7 +10,7 @@ footer a {
 
 .footerContainer {
   padding: 30px 0;
-  @include flex(flex, center, center);
+  @include flex(center, center);
   flex-direction: column;
 
   h5,
@@ -31,7 +31,7 @@ footer a {
 }
 
 .social ul {
-  @include flex(flex, space-around, center);
+  @include flex(space-around, center);
   padding: 40px 0;
   margin: 0;
 
@@ -60,7 +60,7 @@ footer a {
   }
 
   div {
-    @include flex(flex, center, center);
+    @include flex(center, center);
 
     input {
       font-size: 0.7rem;
@@ -76,7 +76,7 @@ footer a {
       height: 35px;
       width: 40px;
       transition: all 0.5s ease;
-      @include flex(flex, center, center);
+      @include flex(center, center);
 
       &:hover,
       &:focus {

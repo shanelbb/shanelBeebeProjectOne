@@ -2,3 +2,71 @@
   background-image: url(../assets/blog-1.jpeg);
   background-position: 20% 0;
 }
+
+.featuredPost {
+  margin: 75px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .postByline {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.postInfo {
+  @include flex(space-between, center);
+
+  .author {
+    width: 100%;
+    margin-top: 40px;
+    @include flex(center, center);
+    flex-direction: column;
+
+    img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    .authorText {
+      margin: 20px 0;
+      h4 {
+        margin: 0;
+      }
+
+      p {
+        font-size: 0.7rem;
+        margin: 5px 0 0 0;
+      }
+    }
+  }
+
+  ul {
+    display: none;
+  }
+}
+
+.postText {
+  text-align: left;
+}
+
+.postShare {
+  @include flex(center, center);
+
+  ul {
+    @include flex(space-between, center);
+    padding: 0;
+
+    li {
+      margin: 20px;
+
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+}

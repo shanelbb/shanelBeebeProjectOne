@@ -35,7 +35,7 @@ label.toggle {
 
 .siteNav {
   position: relative;
-  @include flex(flex, space-between, center);
+  @include flex(space-between, center);
 }
 
 .siteNavList {
@@ -73,21 +73,20 @@ input[type='checkbox']:checked + .siteNavList {
   padding: 0 0 20px;
   a {
     position: relative;
-    span {
+    i {
+      font-size: 1rem;
+    }
+    .cart {
       position: absolute;
-      bottom: -5px;
+      bottom: -8px;
       right: -8px;
 
-      width: 18px;
-      height: 18px;
-
       background-color: $primary;
-      color: $black;
 
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
-      text-align: center;
       font-size: 0.7rem;
-      padding: 1px;
     }
   }
 }
