@@ -331,8 +331,8 @@ ul {
   padding-top: 5px;
   -webkit-transform: scaleX(100%);
           transform: scaleX(100%);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .btn:active {
   -webkit-transform: scale(0.9);
@@ -680,7 +680,8 @@ footer a {
   text-align: center;
   padding-bottom: 20px;
 }
-.features .featuresListItem i {
+.features .featuresListItem .icon i {
+  text-align: center;
   font-size: 2rem;
   width: 75px;
   height: 75px;
@@ -1040,13 +1041,13 @@ footer a {
     text-align: left;
     font-size: 0.7rem;
   }
-  .features article.featuresList .featuresListItem i {
-    margin-right: 25px;
+  .features article.featuresList .featuresListItem .featureText {
+    margin-left: 25px;
   }
-  .features article.featuresList .featuresListItem h3 {
+  .features article.featuresList .featuresListItem .featureText h3 {
     margin-top: 0;
   }
-  .features article.featuresList .featuresListItem p {
+  .features article.featuresList .featuresListItem .featureText p {
     font-size: 0.7rem;
   }
 

@@ -33,7 +33,8 @@ img {
   max-width: 100%;
 }
 
-// The design says to use 14px font but I bumped it up in most places for better readability with designer permission.
+// The design says to use 14px font but I bumped it up in
+// most places for better readability with designer permission.
 p,
 a {
   font-size: 0.8rem;
@@ -81,7 +82,7 @@ ul {
     border-bottom: 1px solid $black;
     padding-top: 5px;
     transform: scaleX(100%);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
   }
 
   &:active {
