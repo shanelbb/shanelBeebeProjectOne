@@ -177,6 +177,27 @@
   .lastPost {
     display: initial;
   }
+
+  // Blog page styles
+
+  .postComments h3,
+  .commentForm h3 {
+    text-align: left;
+  }
+
+  .userForm {
+    align-items: flex-start;
+    input,
+    .userComment {
+      text-align: left;
+    }
+
+    fieldset {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+  }
 }
 
 // ** SMALL DESKTOP MEDIA QUERIES **
@@ -411,6 +432,8 @@
     }
   }
 }
+
+// ** LARGE DESKTOP MEDIA QUERIES
 
 @media (min-width: 1200px) {
   .siteNavList {

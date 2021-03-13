@@ -145,6 +145,12 @@
   .workWithUs {
     @include flex(center, center);
     text-align: center;
+    animation: borderOut 0.5s linear;
+
+    &:hover,
+    &:focus {
+      animation: borderIn 0.5s linear forwards;
+    }
 
     a {
       font-size: 0.8rem;

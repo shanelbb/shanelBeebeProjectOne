@@ -285,6 +285,70 @@ ul {
   line-height: 1.4;
 }
 
+.userForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+.userForm input,
+.userForm .userComment {
+  font-size: 0.8rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+  text-align: center;
+  padding: 40px 0 10px;
+}
+.userForm input:hover, .userForm input:focus,
+.userForm .userComment:hover,
+.userForm .userComment:focus {
+  outline: none;
+  color: #333333;
+  border-bottom: 1px solid #333333;
+}
+.userForm input:hover::-webkit-input-placeholder, .userForm input:focus::-webkit-input-placeholder, .userForm .userComment:hover::-webkit-input-placeholder, .userForm .userComment:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+.userForm input:hover::-moz-placeholder, .userForm input:focus::-moz-placeholder, .userForm .userComment:hover::-moz-placeholder, .userForm .userComment:focus::-moz-placeholder {
+  opacity: 1;
+}
+.userForm input:hover:-ms-input-placeholder, .userForm input:focus:-ms-input-placeholder, .userForm .userComment:hover:-ms-input-placeholder, .userForm .userComment:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+.userForm input:hover::-ms-input-placeholder, .userForm input:focus::-ms-input-placeholder, .userForm .userComment:hover::-ms-input-placeholder, .userForm .userComment:focus::-ms-input-placeholder {
+  opacity: 1;
+}
+.userForm input:hover::placeholder, .userForm input:focus::placeholder,
+.userForm .userComment:hover::placeholder,
+.userForm .userComment:focus::placeholder {
+  opacity: 1;
+}
+.userForm fieldset {
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.userForm .userComment {
+  resize: none;
+  height: 250px;
+}
+.userForm button {
+  margin: 50px 0;
+  font-size: 0.9rem;
+}
+
 @-webkit-keyframes line {
   0% {
     -webkit-transform: scaleX(0.5);
@@ -343,6 +407,111 @@ ul {
           animation: line 0.5s;
 }
 
+@-webkit-keyframes borderIn {
+  0% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  33% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  66% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #333333;
+  }
+  100% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+  }
+}
+
+@keyframes borderIn {
+  0% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  33% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  66% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #333333;
+  }
+  100% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+  }
+}
+@-webkit-keyframes borderOut {
+  0% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+  }
+  33% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #333333;
+  }
+  66% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  100% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+}
+@keyframes borderOut {
+  0% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+  }
+  33% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #333333;
+  }
+  66% {
+    border-top: 1px solid #333333;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  100% {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+}
 header {
   height: 100vh;
   background-size: cover;
@@ -730,6 +899,12 @@ footer a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-animation: borderOut 0.5s linear;
+          animation: borderOut 0.5s linear;
+}
+.gridContainer .workWithUs:hover, .gridContainer .workWithUs:focus {
+  -webkit-animation: borderIn 0.5s linear forwards;
+          animation: borderIn 0.5s linear forwards;
 }
 .gridContainer .workWithUs a {
   font-size: 0.8rem;
@@ -864,6 +1039,11 @@ footer a {
 }
 .postShare ul li a {
   font-size: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.postShare ul li a:hover, .postShare ul li a:focus {
+  color: gray;
 }
 
 .relatedPosts {
@@ -900,13 +1080,109 @@ footer a {
   -o-object-position: 50% 75%;
      object-position: 50% 75%;
   display: block;
+  border: 1px solid transparent;
+  position: relative;
+  -webkit-animation: borderOut 0.5s ease-in-out;
+          animation: borderOut 0.5s ease-in-out;
+}
+.relatedPosts ul img:hover, .relatedPosts ul img:focus {
+  -webkit-animation: borderIn 0.5s ease-in-out forwards;
+          animation: borderIn 0.5s ease-in-out forwards;
 }
 .relatedPosts ul p {
   margin-top: 10px;
 }
+.relatedPosts ul p:hover, .relatedPosts ul p:focus {
+  text-decoration: underline;
+}
 
 .lastPost {
   display: none;
+}
+
+.postComments {
+  margin-bottom: 50px;
+}
+
+.postComments h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.comment1 {
+  border-top: 1px solid #b3b3b3;
+  padding-top: 25px;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 40px;
+}
+.comment img {
+  margin-right: 20px;
+  max-height: 75px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bubble {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f6f6f6;
+  padding: 20px;
+  position: relative;
+}
+.bubble h4 {
+  font-size: 0.7rem;
+  margin: 0;
+}
+.bubble h4 span {
+  text-transform: capitalize;
+  font-style: italic;
+}
+.bubble p {
+  font-size: 0.7rem;
+  color: #666666;
+}
+.bubble .commentDate {
+  margin: 0;
+  font-size: 0.6rem;
+  color: gray;
+}
+
+.bubble::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 15px solid #f6f6f6;
+}
+
+.commentForm h3 {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b3b3b3;
+  margin: 0;
 }
 
 .headerContact {
@@ -1118,6 +1394,26 @@ footer a {
 
   .lastPost {
     display: initial;
+  }
+
+  .postComments h3,
+.commentForm h3 {
+    text-align: left;
+  }
+
+  .userForm {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .userForm input,
+.userForm .userComment {
+    text-align: left;
+  }
+  .userForm fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
   }
 }
 @media (min-width: 940px) {

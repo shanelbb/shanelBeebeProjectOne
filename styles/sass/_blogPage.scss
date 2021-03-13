@@ -3,6 +3,8 @@
   background-position: 20% 0;
 }
 
+//  Featured post styles
+
 .featuredPost {
   margin: 75px 0 25px;
   text-align: center;
@@ -66,10 +68,18 @@
 
       a {
         font-size: 1rem;
+        transition: all 0.5s ease;
+
+        &:hover,
+        &:focus {
+          color: lighten($black, 30);
+        }
       }
     }
   }
 }
+
+// Related posts styles
 
 .relatedPosts {
   @include flex(center, center);
@@ -94,14 +104,109 @@
       object-fit: cover;
       object-position: 50% 75%;
       display: block;
+      border: 1px solid transparent;
+      position: relative;
+      animation: borderOut 0.5s ease-in-out;
+
+      &:hover,
+      &:focus {
+        animation: borderIn 0.5s ease-in-out forwards;
+      }
     }
 
     p {
       margin-top: 10px;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 }
 
+// Omit last related post on mobile views
 .lastPost {
   display: none;
+}
+
+// Post comments section styles
+
+.postComments {
+  margin-bottom: 50px;
+}
+.postComments h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.comment1 {
+  border-top: 1px solid lighten($black, 50);
+  padding-top: 25px;
+}
+
+.comment {
+  @include flex(space-between, flex-start);
+  margin-bottom: 40px;
+
+  img {
+    margin-right: 20px;
+    max-height: 75px;
+    object-fit: contain;
+  }
+}
+
+// comment section speech bubble styles
+.bubble {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondWhite;
+  padding: 20px;
+  position: relative;
+
+  h4 {
+    font-size: 0.7rem;
+    margin: 0;
+
+    span {
+      text-transform: capitalize;
+      font-style: italic;
+    }
+  }
+
+  p {
+    font-size: 0.7rem;
+    color: lighten($black, 20);
+  }
+
+  .commentDate {
+    margin: 0;
+    font-size: 0.6rem;
+    color: lighten($black, 30);
+  }
+}
+
+// Triangles on speech bubbles in comment section
+.bubble::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 15px solid $secondWhite;
+}
+
+// Comment form styles
+
+.commentForm h3 {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lighten($black, 50);
+  margin: 0;
 }

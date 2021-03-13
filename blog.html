@@ -81,11 +81,14 @@
 
     <!-- main section starts here -->
     <main class="innerWrapper">
+      <!-- Featured post starts her -->
       <article class="featuredPost">
         <h1>How to Run a Creative Agency</h1>
         <p class="postByline">
           Home / Blog / <a href="#">How to Run a Creative Agency</a>
         </p>
+
+        <!-- Featured post info starts here -->
         <section class="postInfo">
           <div class="author">
             <img src="./assets/blog-2.jpeg" alt="Employee portrait" />
@@ -109,6 +112,8 @@
             </li>
           </ul>
         </section>
+
+        <!-- Featured post text starts here -->
         <section class="postText">
           <p>
             <strong>
@@ -162,6 +167,7 @@
         </nav>
       </article>
 
+      <!-- Related posts starts here -->
       <section class="relatedPosts">
         <h3>Related Posts</h3>
         <ul>
@@ -194,30 +200,38 @@
           </li>
         </ul>
       </section>
+
+      <!-- Post comments start here -->
       <section class="postComments">
         <h3>02 Comments</h3>
-        <div class="comment">
+        <div class="comment comment1">
           <img src="/assets/blog-6.jpeg" alt="Commenter profile photo" />
-          <h4>Daniel Vandaft - <span>Reply</span></h4>
-          <p>
-            Ecosystem iPad disruptive social media low hanging fruit stealth
-            launch party handshake market branding.
-          </p>
-          <p class="commentDate">Jul 17,2015 at 15 hours ago</p>
+          <div class="bubble">
+            <h4>Daniel Vandaft - <span>Reply</span></h4>
+            <p>
+              Ecosystem iPad disruptive social media low hanging fruit stealth
+              launch party handshake market branding.
+            </p>
+            <p class="commentDate">Jul 17,2015 at 15 hours ago</p>
+          </div>
         </div>
         <div class="comment">
           <img src="/assets/blog-7.jpeg" alt="Commenter profile photo" />
-          <h4>Jenifer Loopz - <span>Reply</span></h4>
-          <p>
-            Pitch agile development business plan stealth channels prototype
-            mass market product management value proposition startup strategy.
-          </p>
-          <p class="commentDate">Jul 17,2015 at 15 hours ago</p>
+          <div class="bubble">
+            <h4>Jenifer Loopz - <span>Reply</span></h4>
+            <p>
+              Pitch agile development business plan stealth channels prototype
+              mass market product management value proposition startup strategy.
+            </p>
+            <p class="commentDate">Jul 17,2015 at 15 hours ago</p>
+          </div>
         </div>
       </section>
+
+      <!-- Comment Form starts here -->
       <section class="commentForm">
         <h3>Leave A Comment</h3>
-        <form action="">
+        <form action="" class="userForm">
           <fieldset>
             <label for="userName" class="visuallyHidden"
               >Enter your name...</label
@@ -247,15 +261,16 @@
               placeholder="Subject(optional)"
             />
           </fieldset>
-          <label for="UserComment" class="visuallyHidden"
+          <label for="userComment" class="visuallyHidden"
             >Here goes your comment</label
           >
-          <input
-            type="textarea"
-            id="UserComment"
-            name="UserComment"
+          <textarea
+            id="userComment"
+            name="userComment"
+            class="userComment"
             placeholder="Here goes your comment"
-          />
+          ></textarea>
+
           <button type="submit" class="btn">Submit Comment</button>
         </form>
       </section>
