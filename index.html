@@ -114,12 +114,19 @@
       </section>
       <section class="carousel innerWrapper">
         <div class="carouselImgContainer">
-          <span><i class="fas fa-chevron-left"></i></span>
+          <span class="button" id="slideLeft"
+            ><i class="fas fa-chevron-left"></i
+          ></span>
+
           <img
-            src="./assets/home-3.jpeg"
+            id="carouselImg"
+            src=""
             alt="Overhead shot of some print layouts"
           />
-          <span><i class="fas fa-chevron-right"></i></span>
+
+          <span class="button" id="slideRight"
+            ><i class="fas fa-chevron-right"></i
+          ></span>
         </div>
         <p>
           Ecosystem iPad disruptive social media low hanging fruit stealth
@@ -214,12 +221,41 @@
               paradigm shift churn rate niche market graphical user interface
             </p>
           </div>
-          <img src="./assets/home-5.jpeg" alt="Employee portrait" />
-          <img src="./assets/home-6.jpeg" alt="Employee portrait" />
-          <img src="./assets/home-7.jpeg" alt="Employee portrait" />
-          <img src="./assets/home-8.jpeg" alt="Employee portrait" />
-          <img src="./assets/home-9.jpeg" alt="Employee portrait" />
+          <img
+            class="galleryImg"
+            id="galleryImg"
+            src="./assets/home-5.jpeg"
+            alt="Employee portrait"
+          />
+          <img
+            class="galleryImg"
+            id="galleryImg"
+            src="./assets/home-6.jpeg"
+            alt="Employee portrait"
+          />
+          <img
+            class="galleryImg"
+            id="galleryImg"
+            src="./assets/home-7.jpeg"
+            alt="Employee portrait"
+          />
+          <img
+            class="galleryImg"
+            id="galleryImg"
+            src="./assets/home-8.jpeg"
+            alt="Employee portrait"
+          />
+          <img
+            class="galleryImg"
+            id="galleryImg"
+            src="./assets/home-9.jpeg"
+            alt="Employee portrait"
+          />
           <div class="workWithUs"><a href="#">Want to work with us!</a></div>
+        </div>
+
+        <div class="modal" id="modal">
+          <div class="modalContent" id="modalContent"></div>
         </div>
       </section>
       <section class="portfolio">
@@ -298,5 +334,7 @@
         <p><a href="#">Creative Agency</a></p>
       </section>
     </footer>
+
+    <script src="./scripts.js"></script>
   </body>
 </html>
