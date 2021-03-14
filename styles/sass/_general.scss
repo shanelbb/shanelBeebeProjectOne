@@ -59,7 +59,7 @@ ul {
 .userForm {
   @include flex(center, center);
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
   input,
   .userComment {

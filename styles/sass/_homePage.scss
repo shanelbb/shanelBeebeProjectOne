@@ -146,6 +146,7 @@
     @include flex(center, center);
     text-align: center;
     animation: borderOut 0.5s linear;
+    border: 1px solid transparent;
 
     &:hover,
     &:focus {
