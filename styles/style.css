@@ -656,6 +656,9 @@ footer a {
   font-size: 1.3rem;
   margin: 25px 0;
 }
+.footerContainer address {
+  font-style: normal;
+}
 .footerContainer a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -747,8 +750,7 @@ footer a {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 8px;
-  margin: 0;
-  padding: 20px 0;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -1218,6 +1220,50 @@ footer a {
   width: 175px;
 }
 
+.contactDetails {
+  text-align: center;
+}
+.contactDetails h3 {
+  font-weight: bold;
+}
+.contactDetails p,
+.contactDetails address {
+  color: #666666;
+}
+.contactDetails ul {
+  margin: 75px 0;
+  padding-left: 0;
+}
+.contactDetails ul li {
+  padding: 50px 0;
+  border-bottom: 1px solid #b3b3b3;
+}
+.contactDetails ul li i {
+  font-size: 2rem;
+}
+.contactDetails ul li h4 {
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.contactDetails ul li p {
+  margin-bottom: 0;
+}
+.contactDetails ul li address {
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+.getInTouchForm {
+  text-align: center;
+}
+.getInTouchForm h3 {
+  font-weight: bold;
+}
+.getInTouchForm p {
+  color: #666666;
+}
+
 @media (min-width: 480px) {
   .features img {
     height: 400px;
@@ -1415,6 +1461,15 @@ footer a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
   }
+
+  .contactDetails h3,
+.contactDetails .contactMessage {
+    text-align: left;
+  }
+
+  .getInTouchForm {
+    text-align: left;
+  }
 }
 @media (min-width: 940px) {
   .innerWrapper {
@@ -1588,6 +1643,31 @@ footer a {
             justify-content: flex-start;
   }
 
+  .contactDetails ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  .contactDetails ul li {
+    border-bottom: none;
+    width: calc(100% / 3);
+    height: 300px;
+  }
+  .contactDetails ul li:not(:last-child) {
+    border-right: 1px solid #b3b3b3;
+    padding-right: 50px;
+  }
+  .contactDetails ul li:not(:first-child) {
+    padding-left: 50px;
+  }
+
   .footerContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1622,7 +1702,7 @@ footer a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 0;
+    padding-top: 20px;
   }
   .social ul li {
     padding-right: 20px;

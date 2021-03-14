@@ -22,6 +22,11 @@ footer a {
     font-size: 1.3rem;
     margin: 25px 0;
   }
+
+  address {
+    font-style: normal;
+  }
+
   a {
     transition: all 0.5s ease;
     &:hover {
@@ -97,7 +102,6 @@ footer a {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 8px;
-  margin: 0;
-  padding: 20px 0;
+  padding: 50px 0;
   text-align: center;
 }
