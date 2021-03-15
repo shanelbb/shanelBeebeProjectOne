@@ -1433,7 +1433,9 @@ footer a {
     display: initial;
   }
   .portImgContainer img {
-    height: 100%;
+    max-height: 550px;
+    display: block;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
