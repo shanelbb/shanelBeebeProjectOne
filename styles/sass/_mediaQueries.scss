@@ -161,8 +161,12 @@
       object-fit: cover;
     }
   }
+  
+  // Blog page styles
 
   .relatedPosts {
+    align-items: flex-start;
+
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -178,7 +182,6 @@
     display: initial;
   }
 
-  // Blog page styles
 
   .postComments h3,
   .commentForm h3 {
@@ -187,6 +190,7 @@
 
   .userForm {
     align-items: flex-start;
+    
     input,
     .userComment {
       text-align: left;

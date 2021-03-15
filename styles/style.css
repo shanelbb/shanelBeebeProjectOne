@@ -1438,6 +1438,11 @@ footer a {
        object-fit: cover;
   }
 
+  .relatedPosts {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .relatedPosts ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
