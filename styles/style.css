@@ -1379,7 +1379,7 @@ footer a {
     width: 0;
     height: 20%;
     position: absolute;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
     top: -10%;
     left: 50%;
   }
