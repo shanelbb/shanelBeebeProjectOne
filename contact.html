@@ -124,7 +124,7 @@
         <p>
           If you have any questions, please don't hesitate to send us a message
         </p>
-        <form action="" class="userForm">
+        <form action="" class="userForm" id="userForm">
           <fieldset>
             <label for="userName" class="visuallyHidden"
               >Enter your name...</label
@@ -163,7 +163,7 @@
             class="userComment"
             placeholder="Here goes your comment"
           ></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn" id="btn">Send Message</button>
         </form>
       </section>
       <div class="contactMainImgContainer"></div>
@@ -229,5 +229,7 @@
         <p><a href="#">Creative Agency</a></p>
       </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/formScript.js"></script>
   </body>
 </html>

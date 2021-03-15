@@ -101,3 +101,4 @@ modalImage = () => {
     
 modalImage();
 modal.addEventListener('click', handleClickToClose);
+

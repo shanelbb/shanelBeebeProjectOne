@@ -168,37 +168,43 @@
       </article>
 
       <!-- Related posts starts here -->
-      <section class="relatedPosts">
+      <section class="relatedPosts" id="relatedPosts">
         <h3>Related Posts</h3>
         <ul>
           <li>
-            <a href="#">
+            <a href="#relatedPosts">
               <img
                 src="./assets/blog-3.jpeg"
                 alt="A desk in front of a window."
+                class="blogImg"
               />
               <p>July 25, 2018</p>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#relatedPosts">
               <img
                 src="./assets/blog-4.jpeg"
                 alt="A tabletop with a large plant."
+                class="blogImg"
               />
               <p>July 26, 2018</p>
             </a>
           </li>
           <li class="lastPost">
-            <a href="#">
+            <a href="#relatedPosts">
               <img
                 src="./assets/blog-5.jpeg"
                 alt="Overhead shot of a laptop and iphone."
+                class="blogImg"
               />
               <p>July 18, 2018</p>
             </a>
           </li>
         </ul>
+        <div class="blogModal" id="blogModal">
+          <div class="blogModalContent" id="blogModalContent"></div>
+        </div>
       </section>
 
       <!-- Post comments start here -->
@@ -231,7 +237,7 @@
       <!-- Comment Form starts here -->
       <section class="commentForm">
         <h3>Leave A Comment</h3>
-        <form action="" class="userForm">
+        <form action="" class="userForm" id="userForm">
           <fieldset>
             <label for="userName" class="visuallyHidden"
               >Enter your name...</label
@@ -271,7 +277,7 @@
             placeholder="Here goes your comment"
           ></textarea>
 
-          <button type="submit" class="btn">Submit Comment</button>
+          <button type="submit" class="btn" id="btn">Submit Comment</button>
         </form>
       </section>
     </main>
@@ -335,5 +341,8 @@
         <p><a href="#">Creative Agency</a></p>
       </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/formScript.js"></script>
+    <script src="./js/blogModal.js"></script>
   </body>
 </html>

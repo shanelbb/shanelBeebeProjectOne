@@ -947,7 +947,8 @@ footer a {
   display: none;
 }
 
-.modal {
+.modal,
+.blogModal {
   opacity: 0;
   position: fixed;
   z-index: 1;
@@ -966,7 +967,8 @@ footer a {
   pointer-events: none;
 }
 
-.modalContent {
+.modalContent,
+.blogModalContent {
   border-radius: 4px;
   -webkit-transform: translateY(-100vh);
           transform: translateY(-100vh);
@@ -984,7 +986,13 @@ footer a {
   margin-bottom: 30px;
 }
 
-.modalContent figure {
+.blogModalContent {
+  overflow: scroll;
+  color: #ffffff;
+}
+
+.modalContent figure,
+.blogModalContent figure {
   position: relative;
 }
 
@@ -996,6 +1004,21 @@ footer a {
      object-fit: contain;
 }
 
+.blogModalContent img {
+  max-height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogModalContent h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.blogModalContent p {
+  text-align: left;
+}
+
 .close {
   position: absolute;
   top: -10px;
@@ -1005,12 +1028,14 @@ footer a {
   cursor: pointer;
 }
 
-.modal.open {
+.modal.open,
+.blogModal.open {
   opacity: 1;
   pointer-events: all;
 }
 
-.modal.open .modalContent {
+.modal.open .modalContent,
+.blogModal.open .blogModalContent {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1255,6 +1280,13 @@ footer a {
   padding-bottom: 20px;
   border-bottom: 1px solid #b3b3b3;
   margin: 0;
+}
+
+.swal2-popup {
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 
 .headerContact {
