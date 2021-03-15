@@ -7,7 +7,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   display: grid;
   justify-items: center;
   align-items: center;
@@ -32,7 +32,7 @@
 
 .blogModalContent {
   overflow: scroll;
-  color: $white;
+  color: $black;
 }
 
 .modalContent figure,
@@ -52,13 +52,25 @@
   object-fit: cover;
 }
 
+.blogModalContent div {
+  background: $white;
+  padding: 10px;
+}
+
 .blogModalContent h3 {
-  color: $white;
+  color: $black;
  text-align: center;
 }
 
 .blogModalContent p {
   text-align: left;
+}
+
+.modalContent figcaption {
+  color: $black;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
 }
 
 .close {

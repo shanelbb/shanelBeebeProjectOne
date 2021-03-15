@@ -22,7 +22,7 @@ submit.addEventListener('click', (e) => {
     } else {
         //  Success message when form is submitted
         Swal.fire({
-            text: "Your comment has been submitted.",
+            text: "Submitted Succesfully",
             icon: 'success',
             iconColor: '#C3DAB7',
             background: '#f6f6f6',

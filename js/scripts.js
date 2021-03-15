@@ -91,8 +91,11 @@ modalImage = () => {
     galleryImg.forEach(item => {
         item.addEventListener('click', (e) => {
             modalContent.innerHTML = (
-                `<figure><img src="${e.currentTarget.src}" alt="${e.target.alt}"/>
-                <span class="close"><img id="close" src="./assets/close.png" alt="x in a circle icon"/></span></figure>`
+                `<figure>
+                <img src="${e.currentTarget.src}" alt="${e.target.alt}"/>
+                <span class="close"><img id="close" src="./assets/close.png" alt="x in a circle icon"/></span>
+                <figcaption>${e.target.dataset.empname} - ${e.target.dataset.emptitle}</figcaption>
+                </figure>`
                 )
                 openModal();
             })

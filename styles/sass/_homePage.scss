@@ -162,6 +162,17 @@
   }
 }
 
+// Border animation to denote that the image is clickable
+.galleryImg {
+  cursor: pointer;
+  border: 1px solid transparent;
+  animation: borderOut 0.5s ease-in-out;
+   &:hover,
+      &:focus {
+        animation: borderIn 0.5s ease-in-out forwards;
+      }
+}
+
 // Portfolio section styles
 .portTextContainer {
   background-color: $primary;
