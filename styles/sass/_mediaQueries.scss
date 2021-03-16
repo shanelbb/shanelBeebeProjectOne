@@ -23,6 +23,7 @@
   nav {
     position: relative;
   }
+
   label.toggle {
     display: none;
   }
@@ -31,6 +32,7 @@
     font-size: 0.7rem;
     width: 100%;
     @include flex(space-between, center);
+
     li {
       display: flex;
       justify-content: space-between;
@@ -38,6 +40,7 @@
         padding: 0;
         display: flex;
         align-items: center;
+
         li {
           padding: 0 15px;
           transition: all 0.5s ease;
@@ -45,6 +48,7 @@
           &:focus {
             text-decoration: line-through;
           }
+
           a {
             transition: all 0.5s ease;
             &:hover,
@@ -88,9 +92,11 @@
 
   .promo {
     position: relative;
+
     figure {
       justify-content: center;
       width: 40%;
+
       .stamp {
         top: -40px;
         left: -30px;
@@ -119,6 +125,7 @@
     span i {
       font-size: 2rem;
     }
+
     img {
       height: 300px;
       width: 300px;
@@ -153,6 +160,7 @@
     @include flex(center, center);
     flex-direction: column;
   }
+
   .portImgContainer {
     display: initial;
 
@@ -274,6 +282,7 @@
     background-position: 80% 0;
     height: 800px;
     position: relative;
+
     img {
       display: none;
     }
@@ -287,21 +296,27 @@
       position: absolute;
       right: 50px;
       bottom: 50px;
+
       .featuresList1 {
         padding-top: 0;
       }
+
       .featuresList2 {
         padding-bottom: 0;
       }
+
       .featuresListItem {
         @include flex(space-between, flex-start);
         text-align: left;
         font-size: 0.7rem;
+
         .featureText {
           margin-left: 25px;
+
           h3 {
             margin-top: 0;
           }
+
           p {
             font-size: 0.7rem;
           }
@@ -326,6 +341,7 @@
         margin-bottom: 0;
       }
     }
+
     .workWithUs {
       a {
         font-size: 1rem;
@@ -371,6 +387,7 @@
 
       li {
         text-align: left;
+
         h4 {
           margin: 0;
           font-size: 0.8rem;
@@ -414,6 +431,7 @@
   .contactMainImgContainer {
     height: 500px;
   }
+
   // Footer Styles
   .footerContainer {
     flex-direction: row;
@@ -431,10 +449,12 @@
       h5 {
         text-align: left;
       }
+
       p {
         margin: 5px 0;
       }
     }
+
     h5 {
       font-size: 0.9rem;
     }
@@ -468,6 +488,7 @@
     h5 {
       text-align: right;
     }
+
     p {
       text-align: right;
     }
@@ -486,30 +507,11 @@
     font-size: 1.5rem;
   }
 
-  // Footer Styles
-  .footerContainer {
-    p,
-    li,
-    a {
-      font-size: 0.8rem;
-    }
-
-    h5 {
-      font-size: 1.1rem;
-    }
-  }
-
-  .subscribeNow {
-    div {
-      justify-content: flex-end;
-    }
-  }
-
   // Features section styles
   .features {
     background-position: 90% 0;
   }
-
+  
   // Team section styles
   .gridContainer {
     .gridTextContainer {
@@ -517,10 +519,30 @@
         font-size: 0.8rem;
       }
     }
+    
     .workWithUs {
       a {
         font-size: 1.5rem;
       }
+    }
+  }
+  
+  // Footer Styles
+  .footerContainer {
+    p,
+    li,
+    a {
+      font-size: 0.8rem;
+    }
+  
+    h5 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .subscribeNow {
+    div {
+      justify-content: flex-end;
     }
   }
 }

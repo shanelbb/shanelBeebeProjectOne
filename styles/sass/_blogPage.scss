@@ -124,7 +124,7 @@
 
       &:hover,
       &:focus {
-        text-decoration: underline;
+        color: lighten($black, 20);
       }
     }
   }
@@ -140,6 +140,7 @@
 .postComments {
   margin-bottom: 50px;
 }
+
 .postComments h3 {
   font-weight: bold;
   text-align: center;
@@ -147,7 +148,7 @@
 
 .comment1 {
   border-top: 1px solid lighten($black, 50);
-  padding-top: 25px;
+  padding-top: 40px;
 }
 
 .comment {

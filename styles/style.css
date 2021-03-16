@@ -587,7 +587,7 @@ input[type=checkbox]:checked + .siteNavList {
   left: 0;
   width: 100%;
   min-height: 30vh;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 3px;
   z-index: 1;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
@@ -614,7 +614,7 @@ input[type=checkbox]:checked + .siteNavList {
   position: absolute;
   bottom: -8px;
   right: -8px;
-  background-color: #c3dab7;
+  background-color: #C3DAB7;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -623,12 +623,12 @@ input[type=checkbox]:checked + .siteNavList {
 
 footer {
   background-color: #333333;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0;
 }
 
 footer a {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .footerContainer {
@@ -652,7 +652,7 @@ footer a {
   text-align: center;
 }
 .footerContainer h5 {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 1.3rem;
   margin: 25px 0;
 }
@@ -664,7 +664,7 @@ footer a {
   transition: all 0.5s ease;
 }
 .footerContainer a:hover {
-  color: #c3dab7;
+  color: #C3DAB7;
 }
 
 .social ul {
@@ -719,7 +719,7 @@ footer a {
 }
 .subscribeNow div button {
   border: none;
-  background-color: #c3dab7;
+  background-color: #C3DAB7;
   font-size: 1.2rem;
   height: 35px;
   width: 40px;
@@ -760,7 +760,7 @@ footer a {
 }
 
 .promo {
-  background-color: #c3dab7;
+  background-color: #C3DAB7;
   padding: 150px 0 40px;
 }
 .promo figure {
@@ -830,7 +830,7 @@ footer a {
 }
 
 .features {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 .features img {
   height: 250px;
@@ -880,7 +880,7 @@ footer a {
   grid-gap: 10px;
 }
 .gridContainer .gridTextContainer {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 100px 20px 20px;
   grid-column: 1/-1;
 }
@@ -915,7 +915,7 @@ footer a {
 }
 
 .portTextContainer {
-  background-color: #c3dab7;
+  background-color: #C3DAB7;
   text-align: center;
   padding: 50px 30px 65px;
 }
@@ -928,14 +928,14 @@ footer a {
 .portTextContainer a {
   font-size: 0.7rem;
   font-weight: bold;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 15px 25px;
   text-transform: uppercase;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .portTextContainer a:hover, .portTextContainer a:focus {
-  color: #f6f6f6;
+  color: #F6F6F6;
   background-color: #333333;
 }
 .portTextContainer a:active {
@@ -1102,7 +1102,7 @@ footer a {
   margin-top: 10px;
 }
 .relatedPosts ul p:hover, .relatedPosts ul p:focus {
-  text-decoration: underline;
+  color: #666666;
 }
 
 .lastPost {
@@ -1120,7 +1120,7 @@ footer a {
 
 .comment1 {
   border-top: 1px solid #b3b3b3;
-  padding-top: 25px;
+  padding-top: 40px;
 }
 
 .comment {
@@ -1151,7 +1151,7 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 20px;
   position: relative;
 }
@@ -1183,7 +1183,7 @@ footer a {
   height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-right: 15px solid #f6f6f6;
+  border-right: 15px solid #F6F6F6;
 }
 
 .commentForm h3 {
@@ -1762,6 +1762,17 @@ footer a {
     font-size: 1.5rem;
   }
 
+  .features {
+    background-position: 90% 0;
+  }
+
+  .gridContainer .gridTextContainer p {
+    font-size: 0.8rem;
+  }
+  .gridContainer .workWithUs a {
+    font-size: 1.5rem;
+  }
+
   .footerContainer p,
 .footerContainer li,
 .footerContainer a {
@@ -1775,16 +1786,5 @@ footer a {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-
-  .features {
-    background-position: 90% 0;
-  }
-
-  .gridContainer .gridTextContainer p {
-    font-size: 0.8rem;
-  }
-  .gridContainer .workWithUs a {
-    font-size: 1.5rem;
   }
 }
