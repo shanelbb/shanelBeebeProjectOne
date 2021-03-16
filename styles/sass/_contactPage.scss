@@ -13,11 +13,21 @@
   position: relative;
 }
 
+.contactUsContainer::before {
+  content: '';
+  border: 1px solid $black;
+  width: 30px;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
 .contactUsImg {
   height: 20vh;
 }
 
 .contactUsImg img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 30% 0;
