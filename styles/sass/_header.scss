@@ -71,18 +71,19 @@ input[type='checkbox']:checked + .siteNavList {
 
 .bottomList {
   padding: 0 0 20px;
+
   a {
     position: relative;
+
     i {
       font-size: 1rem;
     }
+
     .cart {
       position: absolute;
       bottom: -8px;
       right: -8px;
-
       background-color: $primary;
-
       width: 20px;
       height: 20px;
       border-radius: 50%;

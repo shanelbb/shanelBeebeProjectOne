@@ -124,7 +124,7 @@
 
       &:hover,
       &:focus {
-        text-decoration: underline;
+        color: lighten($black, 20);
       }
     }
   }

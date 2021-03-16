@@ -60,7 +60,8 @@
   span i {
     font-size: 1.5rem;
     transition: all 0.3s ease;
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 0.5;
     }
   }
@@ -77,6 +78,7 @@
 // Features styles
 .features {
   background-color: $secondWhite;
+
   img {
     height: 250px;
     object-fit: cover;
@@ -98,6 +100,7 @@
   .featuresListItem {
     text-align: center;
     padding-bottom: 20px;
+
     .icon {
       i {
         text-align: center;
@@ -145,12 +148,12 @@
   img {
     width: 100%;
   }
+
   .workWithUs {
     @include flex(center, center);
     text-align: center;
     animation: borderOut 0.5s linear;
     border: 1px solid transparent;
-
     &:hover,
     &:focus {
       animation: borderIn 0.5s linear forwards;
@@ -178,12 +181,15 @@
   background-color: $primary;
   text-align: center;
   padding: 50px 30px 65px;
+
   h2 {
     font-size: 1rem;
   }
+
   p {
     margin-bottom: 50px;
   }
+
   a {
     font-size: 0.7rem;
     font-weight: bold;
@@ -191,7 +197,6 @@
     padding: 15px 25px;
     text-transform: uppercase;
     transition: all 0.5s ease;
-
     &:hover,
     &:focus {
       color: $secondWhite;
