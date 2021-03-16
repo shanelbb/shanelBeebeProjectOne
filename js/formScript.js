@@ -11,7 +11,7 @@ submit.addEventListener('click', (e) => {
     e.preventDefault();
     
     // Triggers error message if required fields aren't fille out
-    if (userName.value === '' || userEmail.value === '' || userComment.value === '') {
+    if (!userName.value || !userEmail.value || !userComment.value) {
         Swal.fire({
             title: 'Oops!',
             text: 'Please fill out all required fields',
