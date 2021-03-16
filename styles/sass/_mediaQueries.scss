@@ -141,6 +141,22 @@
   }
 
   // Team section styles
+
+  .team {
+    position: relative;
+  }
+
+  .team::before {
+    content: '';
+    width: 0;
+    height: 10%;
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    top: -15%;
+    left: 50%;
+    z-index: -1;
+  }
+  
   .gridContainer {
     .workWithUs {
       a {

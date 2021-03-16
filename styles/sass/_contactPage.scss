@@ -13,6 +13,15 @@
   position: relative;
 }
 
+.contactUsContainer::before {
+  content:'';
+  border: 1px solid $black;
+  width: 30px;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
 .contactUsImg {
   height: 20vh;
 }

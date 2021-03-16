@@ -1331,6 +1331,15 @@ footer a {
   position: relative;
 }
 
+.contactUsContainer::before {
+  content: "";
+  border: 1px solid #333333;
+  width: 30px;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
 .contactUsImg {
   height: 20vh;
 }
@@ -1529,6 +1538,21 @@ footer a {
 
   .features img {
     height: 500px;
+  }
+
+  .team {
+    position: relative;
+  }
+
+  .team::before {
+    content: "";
+    width: 0;
+    height: 10%;
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    top: -15%;
+    left: 50%;
+    z-index: -1;
   }
 
   .gridContainer .workWithUs a {
