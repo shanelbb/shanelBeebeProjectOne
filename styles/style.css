@@ -974,6 +974,7 @@ footer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid #b3b3b3;
 }
 .postInfo .author {
   width: 100%;
@@ -1012,6 +1013,7 @@ footer a {
 }
 
 .postText {
+  margin-top: 40px;
   text-align: left;
 }
 
@@ -1070,6 +1072,9 @@ footer a {
   font-weight: bold;
 }
 .relatedPosts ul {
+  border-top: 1px solid #b3b3b3;
+  margin-top: 0;
+  padding-top: 40px;
   padding-left: 0;
   width: 100%;
 }
@@ -1600,16 +1605,22 @@ footer a {
     font-size: 1rem;
   }
 
+  .featuredPost {
+    text-align: left;
+  }
   .featuredPost h1 {
     letter-spacing: 2px;
     font-size: 2rem;
+  }
+  .featuredPost .postByline {
+    text-align: left;
+    margin: 0;
   }
 
   .postInfo {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding-bottom: 30px;
-    border-bottom: 1px solid #b3b3b3;
   }
   .postInfo .author {
     -webkit-box-pack: start;
@@ -1647,10 +1658,6 @@ footer a {
   .postInfo ul li p {
     margin: 0;
     font-size: 0.7rem;
-  }
-
-  .postText {
-    padding-top: 30px;
   }
 
   .postShare {

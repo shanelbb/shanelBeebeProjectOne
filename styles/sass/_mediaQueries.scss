@@ -336,22 +336,23 @@
   // Blog page main section styles start here
   // Featured Post section styles
   .featuredPost {
+    text-align: left;
+
     h1 {
       letter-spacing: 2px;
       font-size: 2rem;
     }
-    //  Check with designer if I can leave byline center aligned
-    // .postByline {
-    //   text-align: left;
-    //   margin: 0;
-    // }
+
+    .postByline {
+      text-align: left;
+      margin: 0;
+    }
   }
 
   .postInfo {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding-bottom: 30px;
-    border-bottom: 1px solid lighten($black, 50);
 
     .author {
       justify-content: flex-start;
@@ -381,10 +382,6 @@
         }
       }
     }
-  }
-
-  .postText {
-    padding-top: 30px;
   }
 
   .postShare {
