@@ -1346,6 +1346,7 @@ footer a {
 
 .contactUsImg img {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 30% 0;
