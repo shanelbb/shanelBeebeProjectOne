@@ -539,7 +539,7 @@ input.toggle {
 }
 
 h2.siteLogo {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 label.toggle {
@@ -567,6 +567,9 @@ label.toggle {
 .siteNavList {
   padding: 0;
   text-align: center;
+}
+.siteNavList a {
+  font-size: 0.8rem;
 }
 
 .navListGroup {
@@ -1345,6 +1348,7 @@ footer a {
     text-decoration: line-through;
   }
   .siteNavList li .innerList li a {
+    font-size: 0.7rem;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
@@ -1358,7 +1362,7 @@ footer a {
   }
 
   .siteLogo {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
     width: 200px;
     height: 30px;
@@ -1522,12 +1526,13 @@ footer a {
     width: 80%;
   }
 
-  .siteNavList {
+  .siteNavList li .innerList li a {
     font-size: 0.8rem;
   }
 
   .siteLogo {
     font-size: 1.3rem;
+    top: 3px;
   }
 
   .bottomList a span {
@@ -1779,12 +1784,17 @@ footer a {
   }
 }
 @media (min-width: 1200px) {
-  .siteNavList {
+  .siteNavList li .innerList li a {
     font-size: 1rem;
   }
 
   .siteLogo {
     font-size: 1.5rem;
+    top: 1px;
+  }
+
+  h2.siteLogo {
+    margin: 20px 0;
   }
 
   .features {

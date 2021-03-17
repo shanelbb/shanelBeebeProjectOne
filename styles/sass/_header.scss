@@ -23,7 +23,7 @@ input.toggle {
 }
 
 h2.siteLogo {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 label.toggle {
@@ -41,6 +41,10 @@ label.toggle {
 .siteNavList {
   padding: 0;
   text-align: center;
+
+  a {
+    font-size: 0.8rem;
+  }
 }
 
 .navListGroup {
