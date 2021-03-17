@@ -50,6 +50,7 @@
           }
 
           a {
+            font-size: 0.7rem;
             transition: all 0.5s ease;
             &:hover,
             &:focus {
@@ -66,7 +67,7 @@
   }
 
   .siteLogo {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
     width: 200px;
     height: 30px;
@@ -126,11 +127,11 @@
       font-size: 2rem;
     }
 
-   img {
-     height: 300px;
-     width: 300px;
-     border-radius: 50%;
-   }
+    img {
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+    }
   }
 
   // Features Section styles
@@ -156,7 +157,7 @@
     left: 50%;
     z-index: -1;
   }
-  
+
   .gridContainer {
     .workWithUs {
       a {
@@ -249,12 +250,13 @@
     width: 80%;
   }
 
-  .siteNavList {
+  .siteNavList li .innerList li a {
     font-size: 0.8rem;
   }
 
   .siteLogo {
     font-size: 1.3rem;
+    top: 3px;
   }
 
   .bottomList {
@@ -515,12 +517,37 @@
 // ** LARGE DESKTOP MEDIA QUERIES
 
 @media (min-width: 1200px) {
-  .siteNavList {
+  .siteNavList li .innerList li a {
     font-size: 1rem;
   }
 
   .siteLogo {
     font-size: 1.5rem;
+    top: 1px;
+  }
+
+  h2.siteLogo {
+    margin: 20px 0;
+  }
+
+  // Features section styles
+  .features {
+    background-position: 90% 0;
+  }
+
+  // Team section styles
+  .gridContainer {
+    .gridTextContainer {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .workWithUs {
+      a {
+        font-size: 1.5rem;
+      }
+    }
   }
 
   // Footer Styles
@@ -539,26 +566,6 @@
   .subscribeNow {
     div {
       justify-content: flex-end;
-    }
-  }
-
-  // Features section styles
-  .features {
-    background-position: 90% 0;
-  }
-
-  // Team section styles
-  .gridContainer {
-    .gridTextContainer {
-      p {
-        font-size: 0.8rem;
-      }
-    }
-    
-    .workWithUs {
-      a {
-        font-size: 1.5rem;
-      }
     }
   }
 }
