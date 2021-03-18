@@ -26,12 +26,12 @@ handleClickToClose = (e) => {
 
 // allows user to close alert box with Enter key
 closeOnKeyup = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.key === 'Escape') {
         closeAlert();
     }
 }
 
-// attaches close function to dynamically generated alert button
+// attaches close function to dynamically generated ok button
 document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'alertBtn') {
         closeAlert();

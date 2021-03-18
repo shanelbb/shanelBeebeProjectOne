@@ -1276,6 +1276,7 @@ footer a {
      object-fit: cover;
   -o-object-position: 50% 75%;
      object-position: 50% 75%;
+  cursor: pointer;
   display: block;
   border: 1px solid transparent;
   position: relative;
