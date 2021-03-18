@@ -5,7 +5,6 @@ const img = document.getElementById("carouselImg");
 const right = document.getElementById('slideRight');
 const left = document.getElementById('slideLeft');
 
-
 const images = [
     "./assets/home-3.jpeg",
     "./assets/carousel-1.jpg",
@@ -23,21 +22,21 @@ slideRight = () => {
     if(slide >= images.length - 1) {
     slide = 0;
     img.src = images[slide];
-    return
-}
-    img.src = images[slide + 1];
-    slide++;
+    } else { 
+        img.src = images[slide + 1];
+        slide++;
+    }
 }
 
 // Slides carousel images to the left
 slideLeft = () => {
-    if(slide < 1) {
+    if (slide < 1) {
     slide = images.length - 1;
     img.src = images[slide];
-    return
-}
-    img.src = images[slide - 1];
-    slide--;
+    } else {
+        img.src = images[slide - 1];
+        slide--;
+    }
 }
 
 // Event Listeners
