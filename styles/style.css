@@ -1003,6 +1003,11 @@ footer a {
 .blogModalContent {
   overflow: scroll;
   color: #333333;
+  max-width: 800px;
+  margin: 0 20px;
+  border: 1px solid #b3b3b3;
+  background: #FFF;
+  padding: 20px;
 }
 
 .modalContent figure,
@@ -1022,11 +1027,6 @@ footer a {
   max-height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.blogModalContent div {
-  background: #FFF;
-  padding: 10px;
 }
 
 .blogModalContent h3 {
@@ -1062,6 +1062,75 @@ footer a {
 
 .modal.open .modalContent,
 .blogModal.open .blogModalContent {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.alert {
+  opacity: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.alertContent {
+  background-color: #FFF;
+  border: 1px solid #b3b3b3;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: grid;
+  grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  color: black;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.alertContent h3 {
+  border-bottom: 1px solid #b3b3b3;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.alertContent p {
+  font-size: 0.7rem;
+  color: #666666;
+}
+
+.alertContent button {
+  padding: 10px 15px;
+  background-color: #333333;
+  color: #FFF;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.alert.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.alert.open .alertContent {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1311,13 +1380,6 @@ footer a {
   padding-bottom: 20px;
   border-bottom: 1px solid #b3b3b3;
   margin: 0;
-}
-
-.swal2-popup {
-  border-radius: 0;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-size: 0.8rem;
 }
 
 .headerContact {
