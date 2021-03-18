@@ -1,4 +1,3 @@
-
 // Home page carousel section 
 
 const img = document.getElementById("carouselImg");

@@ -48,7 +48,7 @@ formAlert = () => {
             alertContent.innerHTML = (
                 `<h3>Oops!</h3>
                 <p>Please fill out all required fields</p>
-                <button class="alertBtn" id="alertBtn">OK</button>
+                <button class="errorBtn" id="alertBtn">OK</button>
                 `
             )
             openAlert();
@@ -58,11 +58,11 @@ formAlert = () => {
                 `
                 <h3>Thank You!</h3>
                 <p>Submitted Successfully</p>
-                <button class"alertBtn" id="alertBtn">OK</button>
+                <button class="successBtn" id="alertBtn">OK</button>
                 `
             )
             openAlert();
-            document.getElementById('userForm').reset();
+            // document.getElementById('userForm').reset();
         }
     })
 }
