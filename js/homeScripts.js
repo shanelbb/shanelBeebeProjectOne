@@ -56,16 +56,16 @@ modalImage = () => {
         item.addEventListener('click', (e) => {
             modalContent.innerHTML = (
                 `<figure>
-                <img src="${e.currentTarget.src}" alt="${e.target.alt}"/>
+                <img src="${e.currentTarget.src}" alt="${e.target.alt}" class='modalImg'/>
                 <span class="close"><img id="close" src="./assets/close.png" alt="x in a circle icon"/></span>
                 <figcaption>${e.target.dataset.empname} - ${e.target.dataset.emptitle}</figcaption>
                 </figure>`
                 )
                 openModal();
             })
-        })
-    }
-    
+    })
+}
+ 
 modalImage();
 modal.addEventListener('click', handleClickToClose);
 
