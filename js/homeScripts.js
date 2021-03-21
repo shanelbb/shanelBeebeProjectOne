@@ -19,7 +19,7 @@ img.src = images[0];
 let slide = 0;
 
 // Slides carousel images to the right
-slideRight = () => {
+const slideRight = () => {
     if(slide >= images.length - 1) {
     slide = 0;
     img.src = images[slide];
@@ -30,7 +30,7 @@ slideRight = () => {
 }
 
 // Slides carousel images to the left
-slideLeft = () => {
+const slideLeft = () => {
     if (slide < 1) {
     slide = images.length - 1;
     img.src = images[slide];
@@ -53,7 +53,7 @@ const modalContent = document.getElementById('modalContent');
 const galleryImg = document.querySelectorAll('.galleryImg');
 
 // opens modal when user clicks on an image in the gallery
-modalImage = () => {
+const modalImage = () => {
     galleryImg.forEach(item => {
         item.addEventListener('click', (e) => {
             modalContent.innerHTML = (

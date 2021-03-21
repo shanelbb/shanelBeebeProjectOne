@@ -7,26 +7,27 @@ const userEmail = document.getElementById('userEmail');
 const userComment = document.getElementById('userComment');
 
 // opens alert box
-openAlert = () => {
+const openAlert = () => {
     alert.classList.add('open');
-    window.addEventListener('keyup', closeOnKeyup);
+    document.getElementById('alertBtn').focus();
+    document.addEventListener('keyup', closeOnKeyup);
 }
 
 // closes alert box
-closeAlert = () => {
+const closeAlert = () => {
     alert.classList.remove('open')
 }
 
 // allows user to click outside alert box to close
-handleClickToClose = (e) => {
+const alertClickToClose = (e) => {
     if (e.target === e.currentTarget) {
         closeAlert()
     }
 }
 
 // allows user to close alert box with Enter key
-closeOnKeyup = (e) => {
-    if (e.key === 'Enter' || e.key === 'Escape') {
+const closeOnKeyup = (e) => {
+    if (e.key === 'Escape') {
         closeAlert();
     }
 }

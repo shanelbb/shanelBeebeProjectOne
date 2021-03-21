@@ -5,7 +5,7 @@ const modalContent = document.getElementById('blogModalContent');
 const blogImg = document.querySelectorAll('.blogImg');
 
 // opens modal when user clicks on an image in the gallery
-modalImage = () => {
+const modalBlogPost = () => {
     blogImg.forEach(item => {
         item.addEventListener('click', (e) => {
             modalContent.innerHTML = (
@@ -24,24 +24,22 @@ modalImage = () => {
         })
     }
     
-modalImage();
+modalBlogPost();
 modal.addEventListener('click', handleClickToClose);
 
 
 // FEATURE #2
 // ALERT FOR FORM SUBMISSIONS
-formAlert = () => {
-    // Attaches event lister to submit button
-    submit.addEventListener('click', (e) => {
-        e.preventDefault();
-        // Triggers error message if required fields aren't filled out
-        if (!userName.value || !userEmail.value || !userComment.value) {
-            
-            alertContent.innerHTML = (
-                `<h3>Oops!</h3>
-                <p>Please fill out all required fields</p>
-                <button class="errorBtn" id="alertBtn">OK</button>
-                `
+
+const contentFunc = () => {
+    // Triggers error message if required fields aren't filled out
+    if (!userName.value || !userEmail.value || !userComment.value) {
+        
+        alertContent.innerHTML = (
+            `<h3>Oops!</h3>
+            <p>Please fill out all required fields</p>
+            <button class="errorBtn" id="alertBtn">OK</button>
+            `
             )
             openAlert();
         } else {
@@ -49,18 +47,35 @@ formAlert = () => {
             alertContent.innerHTML = (
                 `
                 <h3>Thank You!</h3>
-                <p>Your comment has been added.</p>
+                <p>Your comment will be added.</p>
                 <button class="successBtn" id="alertBtn">OK</button>
                 `
-            )
-            openAlert();
+                )
+                openAlert();
         }
-    })
+}
+        
+const commentFormAlert = () => {
+     // Attaches event lister to submit button
+        submit.addEventListener('click', (e) => {
+            e.preventDefault();
+            contentFunc();
+        })
 }
 
-formAlert();
-alert.addEventListener('click', handleClickToClose)
+// Allows comment to be submitted when enter is pressed 
+const formAlertOnKeyup = (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault()
+        contentFunc()
+    }
+}
 
+
+commentFormAlert();
+alert.addEventListener('click', alertClickToClose)
+submit.addEventListener('keyup', formAlertOnKeyup)
+        
 
 // FEATURE #3
 // ADDING/DELETING COMMENTS TO PAGE AND LS
@@ -148,7 +163,7 @@ document.addEventListener('click', (e) => {
 // Function to add comment data to local storage
 // (I know you wouldn't really use LS to store page comments but I wanted 
 // to persist them somehow just for this practice project)
-function addCommentLS(comment) {
+const addCommentLS = (comment) => {
     localStorage.setItem('commentsData', JSON.stringify(comment));  
 }
 
@@ -165,7 +180,7 @@ const removeCommentLS = (commentId) => {
 }
 
 // Function to retrieve comment data from local storage
-function getCommentLS() {
+const getCommentLS = () => {
     const localData = localStorage.getItem('commentsData');
     return localData ? JSON.parse(localData) : [];
 }
@@ -182,7 +197,7 @@ const getComments = (saved) => {
                 
         // Add an image to comment
         const commentImg = document.createElement('img');
-        commentImg.src = "../assets/anon-user.png"
+        commentImg.src = "./assets/anon-user.png"
         commentDiv.appendChild(commentImg)
     
         // add comment bubble
@@ -210,7 +225,7 @@ const getComments = (saved) => {
         const removeComment = document.createElement('span');
         removeComment.classList.add('remove');
         // adds id to span to compare with when deleting comment
-        removeComment.setAttribute('id', saved[i].id)
+        removeComment.setAttribute('id', saved[i].id);
         bubble.appendChild(removeComment);
         removeComment.innerText = 'Remove Comment'
     }

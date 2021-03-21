@@ -1,7 +1,7 @@
 // FEATURE #1
 // Custom alerts on form submission
 
-formAlert = () => {
+const contactFormAlert = () => {
     // Attaches event lister to submit button
     submit.addEventListener('click', (e) => {
         e.preventDefault();
@@ -31,5 +31,5 @@ formAlert = () => {
     })
 }
 
-formAlert();
-alert.addEventListener('click', handleClickToClose)
+contactFormAlert();
+alert.addEventListener('click', alertClickToClose)

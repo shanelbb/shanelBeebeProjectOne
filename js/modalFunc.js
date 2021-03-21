@@ -1,17 +1,17 @@
 // Adds open class to modal so that it appears on the page
-openModal = () => {
+const openModal = () => {
     modal.classList.add('open');
     window.addEventListener('keyup', handleKeyup)
 }
 
 // Removing open class from modal to remove from page
-closeModal = () => {
+const closeModal = () => {
     modal.classList.remove('open')
 }
 
 
 // Allows user to click outside image to close the modal
-handleClickToClose = (e) => {
+const handleClickToClose = (e) => {
     if (e.target === e.currentTarget) {
         closeModal();
     }
@@ -25,7 +25,7 @@ document.addEventListener('click', (e) => {
 })
 
 // Allows user to hit escape to close the modal
-handleKeyup = (e) => {
+const handleKeyup = (e) => {
     if (e.key === 'Escape') {
         closeModal();
     }
