@@ -1375,6 +1375,13 @@ footer a {
   border-right: 15px solid #F6F6F6;
 }
 
+.bubble .remove {
+  font-size: 0.6rem;
+  text-decoration: underline;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 .commentForm h3 {
   font-weight: bold;
   text-align: center;

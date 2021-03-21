@@ -207,6 +207,13 @@
   border-right: 15px solid $secondWhite;
 }
 
+.bubble .remove {
+  font-size: 0.6rem;
+  text-decoration: underline;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 // Comment form styles
 
 .commentForm h3 {

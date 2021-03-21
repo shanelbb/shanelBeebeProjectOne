@@ -1,3 +1,4 @@
+// FEATURE #1
 // RELATED POSTS SECTION BLOG MODAL
 const modal = document.getElementById('blogModal');
 const modalContent = document.getElementById('blogModalContent');
@@ -27,7 +28,7 @@ modalImage();
 modal.addEventListener('click', handleClickToClose);
 
 
-
+// FEATURE #2
 // ALERT FOR FORM SUBMISSIONS
 formAlert = () => {
     // Attaches event lister to submit button
@@ -61,7 +62,8 @@ formAlert();
 alert.addEventListener('click', handleClickToClose)
 
 
-// ADDING COMMENTS TO PAGE AND LS
+// FEATURE #3
+// ADDING/DELETING COMMENTS TO PAGE AND LS
 
 // Section selector
 const commentSection = document.querySelector('.postComments');
@@ -81,10 +83,12 @@ const assignCommentObj = () => {
         name: '',
         comment: '',
         date: '',
+        id: ''
     }
-    newComment.name = userName.value
-    newComment.comment = userComment.value
-    newComment.date = newDate
+    newComment.name = userName.value;
+    newComment.comment = userComment.value;
+    newComment.date = newDate;
+    newComment.id = Date.now();
     return newComment
 }
 
@@ -112,9 +116,31 @@ document.addEventListener('click', (e) => {
 
         // get all comment data from local storage
         const comments = getCommentLS();
-        
+
         // adds comments to the page
         getComments(comments);
+    }
+})
+
+
+// Creates the click event that removes the comment from the page
+document.addEventListener('click', (e) => {
+    if (e.target.className === 'remove') {
+        //variable to store existing comment data
+        const commentData = getCommentLS();
+
+        // loops through comment data
+        commentData.forEach(el => {
+            // if id of comment data element matches id of target the
+            // comment will be removed and the page updated
+            if (el.id.toString() === e.target.id) {
+                removeCommentLS(el.id)
+                const updatedCommentData = getCommentLS();
+                newComments.innerHTML = '';
+                getComments(updatedCommentData)
+            }
+            
+        })
     }
 })
 
@@ -132,12 +158,17 @@ const addToStoredCommentsArray = (data, value) => {
     localStorage.setItem('commentsData', JSON.stringify(data));
 }
 
+// Function to delete comment when remove comment span is clicked
+const removeCommentLS = (commentId) => {
+    const commentIds = getCommentLS();
+    localStorage.setItem('commentsData', JSON.stringify(commentIds.filter(id => id.id !== commentId)))
+}
+
 // Function to retrieve comment data from local storage
 function getCommentLS() {
     const localData = localStorage.getItem('commentsData');
     return localData ? JSON.parse(localData) : [];
 }
-
 
 // Function to add comments to the page
 const getComments = (saved) => {
@@ -146,7 +177,7 @@ const getComments = (saved) => {
     for (let i = 0; i < saved.length; i++){
         // create div for comments to live in
         const commentDiv = document.createElement('div');
-        commentDiv.classList.add('comment')
+        commentDiv.classList.add('comment');
         newComments.appendChild(commentDiv);
                 
         // Add an image to comment
@@ -173,7 +204,15 @@ const getComments = (saved) => {
         const dateP = document.createElement('p');
         dateP.classList.add('commentDate')
         bubble.appendChild(dateP);
-        dateP.innerText = saved[i].date
+        dateP.innerText = saved[i].date;
+
+        // adds remove comment option to comment element
+        const removeComment = document.createElement('span');
+        removeComment.classList.add('remove');
+        // adds id to span to compare with when deleting comment
+        removeComment.setAttribute('id', saved[i].id)
+        bubble.appendChild(removeComment);
+        removeComment.innerText = 'Remove Comment'
     }
 
     document.getElementById('userForm').reset();

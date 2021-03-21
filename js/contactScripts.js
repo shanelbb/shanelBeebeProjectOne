@@ -1,3 +1,6 @@
+// FEATURE #1
+// Custom alerts on form submission
+
 formAlert = () => {
     // Attaches event lister to submit button
     submit.addEventListener('click', (e) => {
@@ -17,7 +20,7 @@ formAlert = () => {
             alertContent.innerHTML = (
                 `
                 <h3>Thank You!</h3>
-                <p>You're message has been submitted.</p>
+                <p>Your message has been submitted.</p>
                 <button class="successBtn" id="alertBtn">OK</button>
                 `
             )

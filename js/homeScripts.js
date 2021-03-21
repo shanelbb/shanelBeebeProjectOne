@@ -1,4 +1,6 @@
-// Home page carousel section 
+
+// Feature #1
+// Home page carousel section
 
 const img = document.getElementById("carouselImg");
 const right = document.getElementById('slideRight');
@@ -43,7 +45,7 @@ right.addEventListener('click', slideRight);
 left.addEventListener('click', slideLeft);
 
 
-
+// Feature #2
 // Team Members section modal
 
 const modal = document.getElementById('modal');
