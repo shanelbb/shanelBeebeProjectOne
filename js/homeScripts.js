@@ -67,7 +67,26 @@ const modalImage = () => {
             })
     })
 }
+
+// Opens modal when enter is clicked on focused image
+const modalImageOnKeyup = () => {
+    galleryImg.forEach(item => {
+        item.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                modalContent.innerHTML = (
+                `<figure>
+                <img src="${e.currentTarget.src}" alt="${e.target.alt}" class='modalImg'/>
+                <span class="close"><img id="close" src="./assets/close.png" alt="x in a circle icon"/></span>
+                <figcaption>${e.target.dataset.empname} - ${e.target.dataset.emptitle}</figcaption>
+                </figure>`
+                )
+                openModal();
+            }
+        })
+    })
+}
  
 modalImage();
+modalImageOnKeyup();
 modal.addEventListener('click', handleClickToClose);
 

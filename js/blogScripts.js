@@ -4,14 +4,12 @@ const modal = document.getElementById('blogModal');
 const modalContent = document.getElementById('blogModalContent');
 const blogImg = document.querySelectorAll('.blogImg');
 
-// opens modal when user clicks on an image in the gallery
-const modalBlogPost = () => {
-    blogImg.forEach(item => {
-        item.addEventListener('click', (e) => {
-            modalContent.innerHTML = (
+// Stores the content of Blog Post Modal
+const modalHTML = (e) => {
+  modalContent.innerHTML = (
                 `<figure><img src="${e.currentTarget.src}" alt="${e.target.alt}"/>
                 <span class="close"><img id="close" src="./assets/close.png" alt="x in a circle icon"/></span></figure>
-                <div>
+                <div class="blogModalText">
                 <h3>Podcasting Operational Change</h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor doloribus iusto esse? Voluptatibus esse recusandae dolores consectetur? Dolore ut alias, veritatis odit obcaecati sapiente suscipit pariatur quo. Exercitationem architecto magnam aliquid? Ad dolores corrupti unde animi! Ipsam accusantium nobis minima natus ex fuga explicabo dolore quae deleniti excepturi sunt voluptas, voluptatem optio deserunt placeat, esse fugiat dolor consequuntur repudiandae iure libero quia similique, ipsa neque? Ratione consequuntur explicabo repellat illo natus, minus illum harum dolor id in reprehenderit doloribus vel esse! Aliquid nemo temporibus quo libero vitae enim reiciendis, placeat sequi nostrum veritatis, dicta aliquam doloremque expedita sunt rem aut!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus inventore corrupti nesciunt. Magnam iusto inventore molestias expedita qui, rerum nesciunt eligendi hic ullam harum suscipit, unde libero numquam nemo soluta cupiditate id fugiat dolore provident nam nulla distinctio tempore aliquam! Et quisquam inventore enim doloribus accusamus eveniet, odit cumque omnis, nobis illo, eligendi nihil! Deserunt praesentium nobis temporibus molestiae cumque, quos eum optio sunt doloremque reiciendis quas voluptate ipsam vel. Molestias soluta natus suscipit ipsum.</p>
@@ -20,11 +18,31 @@ const modalBlogPost = () => {
                 `
                 )
                 openModal();
+}
+
+// opens modal when user clicks on an image in the gallery
+const modalBlogPost = () => {
+    blogImg.forEach(item => {
+        item.addEventListener('click', (e) => {
+            modalHTML(e);
             })
         })
     }
-    
+
+// Opens modal when enter is clicked on focused image
+const modalBlogOnKeyup = () => {
+    blogImg.forEach(item => {
+        item.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                modalHTML(e);
+            }
+        })
+    })
+}
+
+
 modalBlogPost();
+modalBlogOnKeyup();
 modal.addEventListener('click', handleClickToClose);
 
 
@@ -83,7 +101,7 @@ submit.addEventListener('keyup', formAlertOnKeyup)
 // Section selector
 const commentSection = document.querySelector('.postComments');
 // adds div to comment section for new comments to live in
-newComments = document.createElement('div');
+const newComments = document.createElement('div');
 newComments.classList.add('newCommentsContainer');
 commentSection.appendChild(newComments)
 
@@ -137,9 +155,8 @@ document.addEventListener('click', (e) => {
     }
 })
 
-
-// Creates the click event that removes the comment from the page
-document.addEventListener('click', (e) => {
+// Function to remove comments from page
+const removeAComment = (e) => {
     if (e.target.className === 'remove') {
         //variable to store existing comment data
         const commentData = getCommentLS();
@@ -157,8 +174,17 @@ document.addEventListener('click', (e) => {
             
         })
     }
-})
+}
 
+// Creates the click event that calls the removeAComment function
+newComments.addEventListener('click', removeAComment)
+
+// Allows a comment to be deleted when Enter key is pressed
+newComments.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+        removeAComment(e);
+    }
+})
 
 // Function to add comment data to local storage
 // (I know you wouldn't really use LS to store page comments but I wanted 
@@ -224,6 +250,8 @@ const getComments = (saved) => {
         // adds remove comment option to comment element
         const removeComment = document.createElement('span');
         removeComment.classList.add('remove');
+        // Makes span tabbable so it can be used with enter key
+        removeComment.setAttribute('tabindex', '0')
         // adds id to span to compare with when deleting comment
         removeComment.setAttribute('id', saved[i].id);
         bubble.appendChild(removeComment);
